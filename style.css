@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  /* colors */
+  --pr-1: hsl(193, 38%, 86%);
+  --pr-2: hsl(150, 100%, 66%);
+  --n-1: hsl(217, 19%, 38%);
+  --n-2: hsl(217, 19%, 24%);
+  --n-3: hsl(218, 23%, 16%);
+
+  /* font */
+  --ff-manrope: 'Manrope', sans-serif;
+
+  --fs-header: 0.65rem;
+  --fs-quote: 1.75rem;
+}
+
+body {
+  font-family: var(--ff-manrope);
+  min-height: 100vh;
+  background-color: var(--n-3);
+}
+
+body,
+.advice-container,
+.advice-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-container {
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  background-color: var(--n-2);
+
+  width: min(100% - 2rem, 35rem);
+  margin-inline: auto;
+  padding-block: 2.5rem 3.5rem;
+  border-radius: 0.8rem;
+  position: relative;
+
+  box-shadow: 5px 10px 60px hsla(220, 22%, 8%, 0.771);
+}
+
+.advice-container h1 {
+  color: var(--pr-2);
+  text-transform: uppercase;
+  font-size: var(--fs-header);
+  letter-spacing: 6px;
+}
+
+.advice-container .advice-text {
+  font-size: clamp(1.45rem, 1.3444rem + 0.4507vw, 1.75rem);
+  color: var(--pr-1);
+  width: min(100% - 2.8rem, 28rem);
+}
+
+.divider.mobile {
+  width: min(100% - 2.8rem);
+}
+
+.divider.desktop {
+  width: min(100% - 6.6rem);
+  display: none;
+}
+
+.advice-button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  bottom: -1.65rem;
+  transform: translateX(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--pr-2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.advice-button:hover {
+  box-shadow: 0 0 25px var(--pr-2);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.3rem;
+  color: hsla(193, 38%, 86%, 0.514);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--pr-2);
+}
+
+.attribution a:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .advice-container {
+    padding-block-end: 4rem;
+  }
+
+  .advice-text {
+    margin-block-end: 1.3rem;
+  }
+
+  .divider.mobile {
+    display: none;
+  }
+  .divider.desktop {
+    display: flex;
+  }
+}
