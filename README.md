@@ -49,9 +49,9 @@ Generate a new piece of advice by clicking the dice icon
 
 ### Links
 
-Solution URL: [Repository]()
+Solution URL: [Repository](https://github.com/Fahatmah/advice-generator.git)
 
-Live Site URL: [Live View]()
+Live Site URL: [Live View](https://advice-generator-app-fem-challenge.netlify.app/)
 
 ## My process
 
